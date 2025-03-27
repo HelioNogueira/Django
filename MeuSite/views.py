@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .models import Produto
 from .forms import ProdutoForm
-from django.contrib.auth.decorators import login_required
 
 # Tela de login
 def login_view(request):
@@ -26,7 +25,7 @@ def logout_view(request):
     return redirect('login')
 
 # Página do vendedor (Cadastro de produtos)
-@login_required
+
 def home_venda_view(request):
     if request.method == 'POST':
         form = ProdutoForm(request.POST, request.FILES)

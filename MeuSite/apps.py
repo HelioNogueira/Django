@@ -1,6 +1,5 @@
 from django.apps import AppConfig
 
-
-class MeusiteConfig(AppConfig):
+class MeuSiteConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'MeuSite'
+    name = 'MeuSite'  # Certifique-se de que está correto
